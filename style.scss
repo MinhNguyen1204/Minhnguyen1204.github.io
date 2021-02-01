@@ -3,14 +3,12 @@
   top: 0;
   left: 0;
   right: 0;
-  // max-width: 1180px;
-  // min-width: 1180px ;
   z-index: 100;
   background-color: rgb(83,83,83);
   display: flex;
   justify-content: center;
   > ul {
-    padding: 26px 0;
+    padding: 15px 0;
     display: flex;
 
     > li {
@@ -103,7 +101,7 @@
 }
 
 
-#education, #experience {
+#education, #experience, #skills, #project {
   margin-top: 25px;
 
   .title-text {
@@ -114,12 +112,77 @@
 }
 
 
-#experience {
+#education, #skills {
   margin-top: 50px;
 }
 
+#skills {
+  background-color: #535353;
+  color: #fff;
+  padding: 20px 0 50px 0;
+  .skill {
+    display: flex;
+    justify-content: space-between;
+    &-technical, &-language {
+      flex-basis: 280px;
+      > div {
+        margin-top: 15px;
+      }
+    }
 
+    .text {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
+      .percent {
+        font-size: 14px;
+        opacity: 0.6;
+      }
+    }
+    .progress-bar {
+      width: 100%;
+      position: relative;
+      height: 5px;
+      background-color: #fff;
+      border-radius: 16px;
+      z-index: 20;
+      overflow: hidden;
+  
+    }
+    .progress {
+      border-radius: 16px;
+
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 30;
+      background-color: #ff7979;
+    }
+  }
+}
+
+#project {
+  margin-top: 0;
+  padding: 20px 0;
+  .proj {
+    margin-top: 25px;
+  }
+  table {
+    margin-top: 12px;
+    width: 50%;
+
+    th {
+      text-align: left;
+      padding-left: 12px;
+    }
+    td{
+      padding-left: 12px;
+
+    }
+  }
+}
 
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
@@ -136,6 +199,9 @@ html {
 body {
   background: #d8d8d8;
 }
+ a {
+   text-decoration: none;
+ }
 .seperator {
   margin-top: 100px;
 }
@@ -157,6 +223,9 @@ body {
   background-color: rgb(3,166,98) !important;
 }
 
+.progress-bar {
+
+}
 
 .wrapper-timeline {
   position: relative;
@@ -167,7 +236,7 @@ body {
     width: 4px;
     background: #fff;
     left: 50%;
-    top: 20px;
+    top: 0px;
     transform: translateX(-50%);
 
     .scroll-icon {
@@ -182,25 +251,26 @@ body {
     display: flex;
     &.row-1 {
       justify-content: flex-start;
-      &::before {
-        right: -7px;
-      }
+ 
       section {
         .icon {
-          top: 15px;
+          top: 0;
           right: -60px;
+        }
+        &::before {
+          right: -5px;
         }
       }
     }
     &.row-2 {
       justify-content: flex-end;
-      &::before {
-        left: -7px;
-      }
       section {
         .icon {
-          top: 15px;
+          top: 0;
           left: -60px;
+        }
+        &::before {
+          left: -5px;
         }
       }
     }
@@ -217,7 +287,7 @@ body {
         height: 15px;
         width: 15px;
         background: #fff;
-        top: 28px;
+        top: 3.5px;
         z-index: -1;
         transform: rotate(45deg);
       }
@@ -298,4 +368,8 @@ body {
   .wrapper-timeline .row {
     margin: 10px 0;
   }
+}
+
+table, th, td {
+  border: 1px solid black;
 }

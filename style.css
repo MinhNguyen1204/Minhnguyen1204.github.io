@@ -11,7 +11,7 @@
 }
 
 #header > ul {
-  padding: 26px 0;
+  padding: 15px 0;
   display: flex;
 }
 
@@ -106,18 +106,91 @@
   object-fit: contain;
 }
 
-#education, #experience {
+#education, #experience, #skills, #project {
   margin-top: 25px;
 }
 
-#education .title-text, #experience .title-text {
+#education .title-text, #experience .title-text, #skills .title-text, #project .title-text {
   margin-bottom: 18px;
   font-size: 26px;
   text-align: center;
 }
 
-#experience {
+#education, #skills {
   margin-top: 50px;
+}
+
+#skills {
+  background-color: #535353;
+  color: #fff;
+  padding: 20px 0 50px 0;
+}
+
+#skills .skill {
+  display: flex;
+  justify-content: space-between;
+}
+
+#skills .skill-technical, #skills .skill-language {
+  flex-basis: 280px;
+}
+
+#skills .skill-technical > div, #skills .skill-language > div {
+  margin-top: 15px;
+}
+
+#skills .skill .text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#skills .skill .text .percent {
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+#skills .skill .progress-bar {
+  width: 100%;
+  position: relative;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 16px;
+  z-index: 20;
+  overflow: hidden;
+}
+
+#skills .skill .progress {
+  border-radius: 16px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 30;
+  background-color: #ff7979;
+}
+
+#project {
+  margin-top: 0;
+  padding: 20px 0;
+}
+
+#project .proj {
+  margin-top: 25px;
+}
+
+#project table {
+  margin-top: 12px;
+  width: 50%;
+}
+
+#project table th {
+  text-align: left;
+  padding-left: 12px;
+}
+
+#project table td {
+  padding-left: 12px;
 }
 
 * {
@@ -133,6 +206,10 @@ html {
 
 body {
   background: #d8d8d8;
+}
+
+a {
+  text-decoration: none;
 }
 
 .seperator {
@@ -167,7 +244,7 @@ body {
   width: 4px;
   background: #fff;
   left: 50%;
-  top: 20px;
+  top: 0px;
   transform: translateX(-50%);
 }
 
@@ -186,26 +263,26 @@ body {
   justify-content: flex-start;
 }
 
-.wrapper-timeline .row.row-1::before {
-  right: -7px;
+.wrapper-timeline .row.row-1 section .icon {
+  top: 0;
+  right: -60px;
 }
 
-.wrapper-timeline .row.row-1 section .icon {
-  top: 15px;
-  right: -60px;
+.wrapper-timeline .row.row-1 section::before {
+  right: -5px;
 }
 
 .wrapper-timeline .row.row-2 {
   justify-content: flex-end;
 }
 
-.wrapper-timeline .row.row-2::before {
-  left: -7px;
+.wrapper-timeline .row.row-2 section .icon {
+  top: 0;
+  left: -60px;
 }
 
-.wrapper-timeline .row.row-2 section .icon {
-  top: 15px;
-  left: -60px;
+.wrapper-timeline .row.row-2 section::before {
+  left: -5px;
 }
 
 .wrapper-timeline .row section {
@@ -222,7 +299,7 @@ body {
   height: 15px;
   width: 15px;
   background: #fff;
-  top: 28px;
+  top: 3.5px;
   z-index: -1;
   transform: rotate(45deg);
 }
@@ -305,4 +382,8 @@ body {
   .wrapper-timeline .row {
     margin: 10px 0;
   }
+}
+
+table, th, td {
+  border: 1px solid black;
 }
