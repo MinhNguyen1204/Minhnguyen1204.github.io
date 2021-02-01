@@ -273,7 +273,7 @@ body {
 }
 
 @media (max-width: 790px) {
-  .wrapper .center-line {
+  .wrapper-timeline .center-line {
     left: 40px;
   }
   .wrapper .row {
@@ -290,12 +290,12 @@ body {
   }
 }
 @media (max-width: 440px) {
-  .wrapper .center-line,
+  .wrapper-timeline .center-line,
   .row section::before,
   .row section .icon {
     display: none;
   }
-  .wrapper .row {
+  .wrapper-timeline .row {
     margin: 10px 0;
   }
 }
