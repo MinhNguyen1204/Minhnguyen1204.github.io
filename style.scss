@@ -88,6 +88,7 @@
       }
     }
     .avatar {
+      order: 2;
       flex: 1;
       display: flex;
       align-items: center;
@@ -111,18 +112,20 @@
   }
 }
 
-
-#education, #skills {
-  margin-top: 50px;
-}
-
 #skills {
   background-color: #535353;
   color: #fff;
+  margin-top: 30px;
   padding: 20px 0 50px 0;
   .skill {
     display: flex;
     justify-content: space-between;
+    .border {
+      width: 100%;
+      height: 1px;
+      background-color: #d8d8d8;
+      display: none;
+    }
     &-technical, &-language {
       flex-basis: 280px;
       > div {
@@ -203,7 +206,7 @@ body {
    text-decoration: none;
  }
 .seperator {
-  margin-top: 100px;
+  margin-top: 67px;
 }
 .container {
   max-width: 1180px;
@@ -344,7 +347,7 @@ body {
 
 @media (max-width: 790px) {
   .wrapper-timeline .center-line {
-    left: 40px;
+    left: 25px;
   }
   .wrapper-timeline .row {
     margin: 30px 0 3px 60px;
@@ -355,10 +358,75 @@ body {
   .row-1 section::before {
     left: -7px;
   }
-  .row-1 section .icon {
-    left: -60px;
+  .row-2 section .icon, .row-1 section .icon {
+
+    top: 0 !important;
+    left: -50px !important;
+    right: unset !important;
+    width: 30px !important;
+    height: 30px !important;
+    line-height: 30px !important;
+
   }
 }
+
+table, th, td {
+  border: 1px solid black;
+}
+
+
+@media (max-width: 768px) {
+  #gioithieu {
+
+    .information {
+      display: block;
+      .avatar {
+        justify-content: center;
+        margin-bottom: 10px;
+        > img {
+          border-radius: 50%;
+          height: 125px;
+          width: 125px;
+          object-fit: cover;
+        }
+      }
+      .infor_position, .infor_name {
+        text-align: center;
+      }
+      .infor_another {
+        align-items: flex-start;
+      }
+      .infor_website {
+        text-align: center;
+      }
+    }
+  }
+
+  #experience {
+    padding: 0 20px;
+  }
+  #education {
+    padding: 0 20px;
+  }
+  #skills {
+    padding: 20px 20px 30px 20px;
+    .skill {
+      display: block;
+
+    }
+    .border {
+      display: block !important;
+      margin-top: 25px;
+    }
+  }
+  #project {
+    padding: 20px;
+    table {
+      width: 100%;
+    }
+  }
+}
+
 @media (max-width: 440px) {
   .wrapper-timeline .center-line,
   .row section::before,
@@ -370,6 +438,16 @@ body {
   }
 }
 
-table, th, td {
-  border: 1px solid black;
+@media (max-width: 375px) {
+  #gioithieu {
+    .card {
+      padding: 14px;
+    }
+    li {
+      .title {
+        margin-right: 15px !important;
+        font-size: 14px !important;
+      }
+    }
+  }
 }
