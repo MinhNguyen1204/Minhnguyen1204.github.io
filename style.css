@@ -42,6 +42,20 @@
   cursor: pointer;
 }
 
+#header > ul .active::after {
+  width: 100%;
+}
+
+#header .percent-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 101;
+  background-color: #03a662;
+  height: 5px;
+}
+
 #gioithieu .information {
   display: flex;
   justify-content: space-between;
@@ -107,11 +121,17 @@
   object-fit: contain;
 }
 
-#education, #experience, #skills, #project {
+#education,
+#experience,
+#skills,
+#project {
   margin-top: 25px;
 }
 
-#education .title-text, #experience .title-text, #skills .title-text, #project .title-text {
+#education .title-text,
+#experience .title-text,
+#skills .title-text,
+#project .title-text {
   margin-bottom: 18px;
   font-size: 26px;
   text-align: center;
@@ -373,7 +393,8 @@ a {
   .row-1 section::before {
     left: -7px;
   }
-  .row-2 section .icon, .row-1 section .icon {
+  .row-2 section .icon,
+  .row-1 section .icon {
     top: 0 !important;
     left: -50px !important;
     right: unset !important;
@@ -383,7 +404,9 @@ a {
   }
 }
 
-table, th, td {
+table,
+th,
+td {
   border: 1px solid black;
 }
 
@@ -401,7 +424,8 @@ table, th, td {
     width: 125px;
     object-fit: cover;
   }
-  #gioithieu .information .infor_position, #gioithieu .information .infor_name {
+  #gioithieu .information .infor_position,
+  #gioithieu .information .infor_name {
     text-align: center;
   }
   #gioithieu .information .infor_another {
